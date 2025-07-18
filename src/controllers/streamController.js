@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { validationError } from '../utils/errors';
-import config from '../config/config';
-import { getServers } from './serversController';
-import { extractStream } from '../extractor/extractStream';
-import extractSyncData from '../extractor/extractSyncData';
+import { validationError } from '../utils/errors.js';
+import config from '../config/config.js';
+import { getServers } from './serversController.js';
+import { extractStream } from '../extractor/extractStream.js';
+import extractSyncData from '../extractor/extractSyncData.js';
 
 const streamController = async (c) => {
   let { id, server = 'HD-1', type = 'sub' } = c.req.query();
