@@ -1,7 +1,7 @@
-import app from './src/app';
+import app from './src/app.js';
 import Bun from 'bun';
 
 Bun.serve({
-  port: 3030,
+  port: 4000,
   fetch: app.fetch,
 });

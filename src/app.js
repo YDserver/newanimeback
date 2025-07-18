@@ -15,13 +15,11 @@ const app = new Hono();
 
 config();
 
-const origins = process.env.ORIGIN ? process.env.ORIGIN.split(',') : '*';
-
 // third party middlewares
 app.use(
   '*',
   cors({
-    origin: origins,
+    origin: '*', // Always allow all origins
     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowHeaders: '*',
   })

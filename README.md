@@ -1,3 +1,23 @@
+# hianime-API
+
+## Deploying to Vercel (Bun)
+
+1. **Push this repo to GitHub.**
+2. **Create a new Vercel project** and link it to your repo.
+3. Vercel will auto-detect Bun via `.bun-version` and `bun.lock`.
+4. Make sure your `vercel.json` uses `@vercel/bun`:
+   ```json
+   {
+     "version": 2,
+     "builds": [{ "src": "index.js", "use": "@vercel/bun" }],
+     "routes": [{ "src": "/(.*)", "dest": "index.js" }]
+   }
+   ```
+5. Set any environment variables (like `ORIGIN`) in the Vercel dashboard if needed.
+6. Deploy! Your API will be live on Vercel with Bun.
+
+---
+
 # <p align="center">📺 hianime-API</p>
 
 <div align="center">
