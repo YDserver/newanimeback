@@ -10,11 +10,25 @@
    {
      "version": 2,
      "builds": [{ "src": "index.js", "use": "@vercel/bun" }],
-     "routes": [{ "src": "/(.*)", "dest": "index.js" }]
+     "routes": [{ "src": "/(.*)", "dest": "/index.js" }]
    }
    ```
 5. Set any environment variables (like `ORIGIN`) in the Vercel dashboard if needed.
 6. Deploy! Your API will be live on Vercel with Bun.
+
+---
+
+## Local Development
+- Install [Bun](https://bun.sh/)
+- Run: `bun install`
+- Start: `bun index.js`
+
+---
+
+## Notes
+- CORS is set to allow all origins by default for development.
+- For production, set the `ORIGIN` env variable in Vercel for stricter CORS.
+- Updated for Node.js runtime compatibility on Vercel.
 
 ---
 
